@@ -10,21 +10,28 @@ public class EmpWage {
 		int numberOfHours = 8;
 		int partTime = 4;
 		int isPresent =(int) Math.floor(Math.random() * 10 )%3;
-		if (isPresent == 0) {
-			System.out.println("emplyoee is absent");
-			System.out.println("emplyoee earn = 0");
-			}
-		else if (isPresent == employeePresent){
-				System.out.println(" Emplyoee is present");
-				System.out.println("emplyoee earn =" +numberOfHours*wagePerHour);			
-				  }
-		else 
+		switch (isPresent)
 		{
+			case 0:
+				System.out.println("Emplyoee is absent");
+				System.out.println("Emplyoee wage is 0");
+				break;
 			
-			System.out.println("emplyoee working as a part time");
-		    System.out.println("emplyoee earn=" + partTime*numberOfHours);
+			case 1:
+				System.out.println("Emplyoee is present");
+				System.out.println("Emplyoee Salary is" +wagePerHour*numberOfHours);
+				break;
+			
+			case 2:
+				System.out.println("Emplyoee is working as part-Time");
+				System.out.println("Working hour is" + partTime*wagePerHour);
+				break;
+			
+			default:
+				System.out.println("invalid entry");
+				break;
 		}
-	}
+		}
 	
 
 }

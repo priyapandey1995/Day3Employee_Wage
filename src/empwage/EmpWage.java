@@ -7,24 +7,23 @@ public class EmpWage {
 		// TODO Auto-generated method stub
 		int employeePresent = 1;
 		int wagePerHour = 20;
-		int numberOfHours = 8;
+		int empHours = 8;
 		int partTime = 4;
 		int isPresent =(int) Math.floor(Math.random() * 10 )%3;
 		switch (isPresent)
 		{
 			case 0:
 				System.out.println("Emplyoee is absent");
-				System.out.println("Emplyoee wage is 0");
 				break;
 			
 			case 1:
 				System.out.println("Emplyoee is present");
-				System.out.println("Emplyoee Salary is" +wagePerHour*numberOfHours);
+				empHours=8;
 				break;
 			
 			case 2:
 				System.out.println("Emplyoee is working as part-Time");
-				System.out.println("Working hour is" + partTime*wagePerHour);
+				partTime=4
 				break;
 			
 			default:

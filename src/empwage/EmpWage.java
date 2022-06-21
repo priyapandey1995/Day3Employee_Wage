@@ -7,14 +7,16 @@ public class EmpWage {
 		// TODO Auto-generated method stub
 		//int employeePresent = 1;
 		int wagePerHour = 20;
-		int numberOfHours = 8;
+		int empHours = 8;
 		int partTime = 4;
-		int isPresent =(int) Math.floor(Math.random() * 10 )%3;
+		int empWage=0;
+		int totalSalary=0;
+	
 		int day = 1;
 		
-		while (day<=20)
+		for(day=1;day<=20;day++)
 		{
-		
+		int isPresent =(int) Math.floor(Math.random() * 10 )%3;
 		switch (isPresent)
 		{
 			case 0:
@@ -24,13 +26,12 @@ public class EmpWage {
 			
 			case 1:
 				System.out.println("Emplyoee is present");
-				System.out.println("Emplyoee Salary is" +wagePerHour*numberOfHours);
-				System.out.println("Emplyoee salary for 20 days is" +wagePerHour*numberOfHours*20);
+				empHours=8;
 				break;
 			
 			case 2:
 				System.out.println("Emplyoee is working as part-Time");
-				System.out.println("Working hour is" + partTime*wagePerHour*20);
+				partTime=4;
 				break;
 			
 			default:
@@ -38,13 +39,15 @@ public class EmpWage {
 				break;
 				
 		}
-		day++;
-	
+		    empWage = empHours * wagePerHour;
+		     totalSalary = totalSalary+empWage;
+			System.out.println(totalSalary);
+			
 		}
 		
 
 		
-	}
+	
 	
 	
 

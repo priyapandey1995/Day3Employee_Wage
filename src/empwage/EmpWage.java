@@ -14,7 +14,7 @@ public class EmpWage {
 			System.out.println("emplyoee is absent");
 			System.out.println("emplyoee earn = 0");
 			}
-		else if (isPresent == employeePresent){
+		else if (isPresent == 1){
 				System.out.println(" Emplyoee is present");
 				System.out.println("emplyoee earn =" +numberOfHours*wagePerHour);			
 				  }

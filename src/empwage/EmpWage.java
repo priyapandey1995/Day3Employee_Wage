@@ -1,51 +1,37 @@
 package empwage;
-
 public class EmpWage {
 
 	public static void main(String[] args) {
-		System.out.println("welcome to emplyoee wage");
+		System.out.println("Welcome to Employee Wage");
 		// TODO Auto-generated method stub
-		//int employeePresent = 1;
+		int employeePresent = 1;
+		int employeePartTime = 2;
 		int wagePerHour = 20;
 		int numberOfHours = 8;
-		int partTime = 4;
-		int isPresent =(int) Math.floor(Math.random() * 10 )%3;
-		int day = 1;
-		
-		while (day<=20)
-		{
-		
-		switch (isPresent)
-		{
-			case 0:
-				System.out.println("Emplyoee is absent");
-				System.out.println("Emplyoee wage is 0");
-				break;
-			
-			case 1:
-				System.out.println("Emplyoee is present");
-				System.out.println("Emplyoee Salary is" +wagePerHour*numberOfHours);
-				System.out.println("Emplyoee salary for 20 days is" +wagePerHour*numberOfHours*20);
-				break;
-			
-			case 2:
-				System.out.println("Emplyoee is working as part-Time");
-				System.out.println("Working hour is" + partTime*wagePerHour*20);
-				break;
-			
-			default:
-				System.out.println("invalid entry");
-				break;
-				
-		}
-		day++;
-	
-		}
-		
+		int numberOfHoursForPartTime = 4;
+		int workingDayInAMonth = 20;
+		int isPresent = (int) Math.floor(Math.random() * 3);
+		switch (isPresent) {
+		case 0:
+			System.out.println("Employee is Present");
+			System.out.println("Employee earn = " + numberOfHours * wagePerHour);
+			int totalHourPerMonth = 1;
+			while (totalHourPerMonth <= 100) {
+				totalHourPerMonth++; }
+				System.out.println("Employee earn in a month =" + totalHourPerMonth * wagePerHour);
+			break;
+		case 1:
+			System.out.println("Employee is doing Part Time");
+			System.out.println("Employee earn = " + numberOfHoursForPartTime * wagePerHour);
+			System.out
+					.println("Employee earn per Month =" + numberOfHoursForPartTime * wagePerHour * workingDayInAMonth);
 
-		
+			break;
+		case 2:
+			System.out.println("Employee is not Present");
+			System.out.println("Employee earn = 0");
+			System.out.println("Employee earn = 0");
+			break;
+		}
 	}
-	
-	
-
 }
